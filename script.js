@@ -46,7 +46,9 @@ window.addEventListener("load", () => {
                     // data URIを生成
                     const typeList = new Map([
                         ["png", ["image/png", ".png"]],
-                        ["jpg", ["image/jpeg", ".jpg"]]
+                        ["jpg", ["image/jpeg", ".jpg"]],
+                        ["gif", ["image/gif", ".gif"]],
+                        ["webp", ["image/webp", ".webp"]]
                     ]);
                     const resultDataURI = convertCanvas.toDataURL(typeList.get($("#format").value)[0]);
                     // 変換後の画像を埋め込み
