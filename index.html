@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Image Converter Web</title>
+    <!-- ファイル読み込み -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <!-- ==== favicon設定 ==== -->
+    <link rel="icon" href="https://axtech.dev/img/logo.svg">
+    <!-- ==== OGP設定 ==== -->
+    <meta property="og:type" content="webpage">
+    <meta property="og:title" content="Image Converter Web">
+    <meta property="og:description" content="サーバーへ画像を送らずに画像変換ができるWEBサービス">
+    <meta property="og:image" content="https://axtech.dev/img/thumbnail.png">
+    <meta name="twitter:card" content="summary">
+</head>
+
+<body>
+    <h1>Image Converter Web</h1>
+    <div class="drop">
+        <p>ここにファイルをドロップ</p>
+    </div>
+    <div class="setting">
+        <p><label for="width">幅(px)</label><input type="text" id="width" value="1x"></p>
+        <p><label for="height">高さ(px)</label><input type="text" id="height" value="1x"></p>
+        <p class="note">数字の後ろにxをつける(例 : 2x)と元画像からの倍率として解釈します</p>
+        <p><label for="format">出力形式</label><select id="format">
+                <option value="png">png</option>
+                <option value="jpg">jpg</option>
+            </select></p>
+    </div>
+    <div class="list">
+    </div>
+</body>
+
+</html>
