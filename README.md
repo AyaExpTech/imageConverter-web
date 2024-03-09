@@ -7,7 +7,7 @@ canvasの練習代わりです
 
 ~~webサイトとして開けばいけます、たぶん~~ちゃんと用意しました！
 
-- https://image-convert.pages.dev/ を開きます
+- https://ayaexptech.github.io/imageConverter-web/ を開きます
 - 画面右上で出力条件を指定します
 - 画面左上の枠に変換したい画像をドロップします
 
