@@ -9,28 +9,40 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <!-- ==== favicon設定 ==== -->
-    <link rel="icon" href="https://axtech.dev/img/logo.svg">
+    <link rel="icon" href=https://cdn.jsdelivr.net/gh/AyaExpTech/logos/AyaExpTech_AXTBlue_AXTWhite.svg">
     <!-- ==== OGP設定 ==== -->
     <meta property="og:type" content="webpage">
     <meta property="og:title" content="Image Converter Web">
     <meta property="og:description" content="サーバーへ画像を送らずに画像変換ができるWEBサービス">
-    <meta property="og:image" content="https://axtech.dev/img/thumbnail.png">
+    <meta property="og:image" content="https://axtech.dev/imgs/top/AyaExpTech.webp">
     <meta name="twitter:card" content="summary">
 </head>
 
 <body>
-    <h1>Image Converter Web</h1>
+    <div class="header">
+        <h1>Image Converter Web</h1>
+        <p>Copyright (c) 2023- Ayasaka-Koto</p>
+    </div>
+    <div class="github">
+        <p><a href="https://github.com/AyaExpTech/imageConverter-web"><i class="fa-brands fa-github"></i></a></p>
+    </div>
     <div class="drop">
-        <p>ここにファイルをドロップ</p>
+        <p>ここにファイルをドロップ<br>もしくは押下してファイルを選択</p>
     </div>
     <div class="setting">
         <p><label for="width">幅(px)</label><input type="text" id="width" value="1x"></p>
         <p><label for="height">高さ(px)</label><input type="text" id="height" value="1x"></p>
-        <p class="note">数字の後ろにxをつける(例 : 2x)と元画像からの倍率として解釈します</p>
+        <p class="note">
+            自然数を入力すると幅と高さをそのpx数で固定します。<br>
+            数字の後ろにxをつける(例 : 2x)とpx数を元の画像に対してその倍数にします。<br>
+        </p>
         <p><label for="format">出力形式</label><select id="format">
                 <option value="png">png</option>
                 <option value="jpg">jpg</option>
+                <hr>
                 <option value="gif">gif</option>
+                <option value="bmp">bmp</option>
+                <hr>
                 <option value="webp">webp</option>
             </select></p>
     </div>

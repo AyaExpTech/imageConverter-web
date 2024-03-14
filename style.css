@@ -2,8 +2,12 @@
     フォントの読み込み
 ================================================================================== */
 
-/* 'M PLUS 1p' */
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@400;700&display=swap');
+/* ==== 'M PLUS 1p' - 通常フォント ==== */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap');
+/* ==== 'Ubuntu' - 英字デザインフォント ==== */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+/* ==== 'Font Awesome 6 Free' - アイコンフォント ==== */
+@import url('https://use.fontawesome.com/releases/v6.5.1/css/all.css');
 
 /* =================================================================================
     リセットCSS(どっちかというとNormalize.css)
@@ -62,35 +66,74 @@ body {
     見出し
 ================================================================================== */
 
-body>h1 {
+body > div.header {
     grid-area: 1 / 1 / 2 / -1;
     text-align: center;
+
+    & > h1 {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        height: 1.8rem;
+        font-family: 'Ubuntu';
+        font-weight: 400;
+    }
+
+    & > p {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        height: 1.2rem;
+        font-family: 'Ubuntu';
+        font-weight: 300;
+    }
+}
+
+/* =================================================================================
+    GitHubへのリンク
+================================================================================== */
+
+body > div.github {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 3rem;
+    height: 3rem;
+    border-bottom-left-radius: 1rem;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    background-color: hsl(var(--theme) var(--s1) var(--l2));
+    box-shadow: 0px 0px 8px 0px black;
 }
 
 /* =================================================================================
     ドロップ範囲
 ================================================================================== */
 
-body>div.drop {
+body > div.drop {
     grid-area: 3 / 1 / 4 / 2;
     margin: 0 0.5rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: hsl(var(--theme) var(--s1) var(--l1));
     border-radius: 1rem;
     box-shadow: inset 0px 0px 8px 0px black;
     user-select: none;
+    filter: brightness(1);
+    transition: filter 0.25s;
 
-    &>p {
-        width: 100%;
-        height: 100%;
-        line-height: 12rem;
+    &:hover {
+        filter: brightness(.9);
+    }
+
+    &:active {
+        filter: brightness(.8);
+    }
+
+    & > p {
+        vertical-align: middle;
         text-align: center;
         border-radius: 1rem;
-        background-color: rgba(0, 0, 0, 0.1);
-        transition: background-color 0.25s;
-
-        &:hover {
-            background-color: rgba(0, 0, 0, 0.3);
-        }
     }
 }
 
@@ -98,7 +141,7 @@ body>div.drop {
     設定画面
 ================================================================================== */
 
-body>div.setting {
+body > div.setting {
     grid-area: 3 / 2 / 4 / -1;
     margin: 0 0.5rem 0 0;
     padding: 0.5rem 0.5rem 0;
@@ -107,15 +150,15 @@ body>div.setting {
     border-radius: 1rem;
     box-shadow: inset 0px 0px 8px 0px black;
 
-    &>p {
-        &>label {
+    & > p {
+        & > label {
             display: inline-block;
             width: 20%;
             padding-right: 8px;
             text-align: center;
         }
 
-        &>input,
+        & > input,
         select {
             display: inline-block;
             width: 80%;
@@ -123,7 +166,7 @@ body>div.setting {
             color: hsl(var(--theme) var(--s1) var(--l1));
             padding-left: 0.5rem;
 
-            &>option {
+            & > option {
                 color: hsl(var(--theme) var(--s1) var(--l1));
             }
         }
@@ -134,7 +177,7 @@ body>div.setting {
             opacity: 0.67;
             margin-bottom: 8px;
             font-size: smaller;
-            line-height: 1.5rem;
+            line-height: 1.25;
             font-style: italic;
         }
     }
@@ -144,7 +187,7 @@ body>div.setting {
     結果・ダウンロード画面
 ================================================================================== */
 
-body>div.list {
+body > div.list {
     grid-area: 5 / 1 / -1 / -1;
     margin: 0 0.5rem 0 0;
     padding: 0.5rem 0.5rem 0;
@@ -158,7 +201,7 @@ body>div.list {
     gap: 1rem;
     align-content: flex-start;
 
-    &>.result {
+    & > .result {
         width: calc(calc(100% / 4) - 1rem);
         height: 16rem;
         border-radius: 1rem;
@@ -166,7 +209,7 @@ body>div.list {
         box-shadow: inset 0px 0px 8px 0px black;
         position: relative;
 
-        &>img {
+        & > img {
             position: absolute;
             width: 100%;
             height: 100%;
@@ -177,7 +220,7 @@ body>div.list {
             object-fit: cover;
         }
 
-        &>button {
+        & > button {
             position: absolute;
             width: 50%;
             height: 1.5rem;
@@ -191,7 +234,7 @@ body>div.list {
             color: hsl(var(--theme) var(--s1) var(--l1));
             border-radius: 1rem;
 
-            &>span {
+            & > span {
                 color: hsl(var(--theme) var(--s1) var(--l1));
                 font-weight: bold;
             }
