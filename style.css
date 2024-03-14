@@ -134,6 +134,7 @@ body > div.drop {
         vertical-align: middle;
         text-align: center;
         border-radius: 1rem;
+        font: 1rem/1.5 'M PLUS 1p';
     }
 }
 
