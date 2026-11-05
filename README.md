@@ -1,19 +1,4 @@
-# imageConverter-web
-
-通信無しで画像変換できるWebサービスです。わざわざ通信するだけもったいないんだよなあ  
-canvasの練習代わりです
-
-## 使い方
-
-~~webサイトとして開けばいけます、たぶん~~ちゃんと用意しました！
-
-- https://ayaexptech.github.io/imageConverter-web/ を開きます
-- 画面右上で出力条件を指定します
-- 画面左上の枠に変換したい画像をドロップします
-
-## 利用規約
-
-Copyright (c) 2023- Ayasaka-Koto
-
-日本の法令や公序良俗に反さなければ自由に利用できます。  
-再配布時は著作者(原作者)として"綾坂こと"を表記してください。
+> [!IMPORTANT]
+> Organization `AyaExpTech`を2027年3月末を目処に廃止するため、このリポジトリも削除されます。
+> [`AXT-AyaKoto/image-converter-web`](https://github.com/AXT-AyaKoto/image-converter-web)に同等のサービスを作ってあるので、そちらに移行してください。
+> https://image-converter-web.ayagawap.workers.dev/
